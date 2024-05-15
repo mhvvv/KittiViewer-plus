@@ -1304,7 +1304,7 @@ class KittiViewer(QMainWindow):
             [self.points.shape[0]], self.w_config.get("PointSize"), dtype=np.float32
         )
         # self.w_pc_viewer.draw_point_cloud(self.points, color=points_rgb, with_reflectivity=False, size=0.1)
-        self.w_pc_viewer.draw_bounding_box()
+        # self.w_pc_viewer.draw_bounding_box()
         # idx = self.image_idxes.index(self.kitti_info["image_idx"])
         if "annos" in self.kitti_info:
             # poses = np.zeros([self.gt_boxes.shape[0], 3])
