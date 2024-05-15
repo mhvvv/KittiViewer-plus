@@ -1,25 +1,25 @@
 {
-    "kitti_detection_root": "/data/sets/kitti_second",
+    "kitti_detection_root": "/home/mh/Desktop/KittiViewer-plus/data/sets/kitti_second",
     "kitti_tracking_root": "/data/sets/kitti_tracking",
     "kitti_segmentation_root": "/data/sets/kitti_segmentation",
     "selected_split": "training",
 
     "compare_results_detection": {
 
-        "root": "/data/sets/kitti_results_detection",
+        "root": "/home/mh/Desktop/KittiViewer-plus/data/sets/kitti_results_detection",
         "methods": [
 
             {
                 "name": "method1",
-                "color": [1.0, 0.0, 1.0]
+                "color": [0.0, 1.0, 0.0]
             },
             {
                 "name": "method2",
-                "color": [1.0, 1.0, 0.0]
+                "color": [0.0, 0.0, 1.0]
             },
             {
                 "name": "method3",
-                "color": [0.0, 0.0, 1.0]
+                "color": [0.0, 1.0, 1.0]
             }
         ]
     },

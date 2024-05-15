@@ -55,7 +55,7 @@ All parameters are stored in `params.json`.
             "methods": [
 
                 {
-                    "name": "method1",
+                    "name": "method1",     <- label: /data/sets/kitti_results_detection/method1/training/*.txt  
                     "color": [1.0, 0.0, 1.0]
                 },
                 {

@@ -1178,7 +1178,7 @@ class KittiViewer(QMainWindow):
         if "annos" in self.kitti_info:
             # gt_box_color = self.w_config.get("GTBoxColor")[:3]
             # gt_box_color = (*gt_box_color, self.w_config.get("GTBoxAlpha"))
-            gt_box_color = (0.5, 0, 0, self.w_config.get("GTBoxAlpha"))
+            gt_box_color = (1, 0, 0, self.w_config.get("GTBoxAlpha")*4)
             diff = self.difficulty.tolist()
             diff_to_name = {-1: "unk", 0: "easy", 1: "moderate", 2: "hard"}
             diff_names = [diff_to_name[d] for d in diff]
@@ -1221,7 +1221,7 @@ class KittiViewer(QMainWindow):
             method_name = compare['method_name']
             difficulty = compare['difficulty']
 
-            box_color = (color[0], color[1], color[2], self.w_config.get("GTBoxAlpha"))
+            box_color = (color[0], color[1], color[2], self.w_config.get("GTBoxAlpha")*4)
             diff = difficulty.tolist()
             diff_to_name = {-1: "unk", 0: "easy", 1: "moderate", 2: "hard"}
             diff_names = [diff_to_name[d] for d in diff]
@@ -1320,7 +1320,8 @@ class KittiViewer(QMainWindow):
             )
             point_size[gt_point_mask] = self.w_config.get("GTPointSize")
             gt_point_color = self.w_config.get("GTPointColor")
-            gt_point_color = (*gt_point_color[:3], self.w_config.get("GTPointAlpha"))
+            # gt_point_color = (*gt_point_color[:3], self.w_config.get("GTPointAlpha"))
+            gt_point_color = (1,1,0, self.w_config.get("GTPointAlpha"))
             point_color[gt_point_mask] = gt_point_color
         self.w_pc_viewer.remove("dt_boxes/labels")
         self.w_pc_viewer.remove("dt_boxes")
